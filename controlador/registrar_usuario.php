@@ -8,7 +8,7 @@
 
     $objUsuario = new usuarios();
     
-    $respuesta=$objUsuario->registrar($conexion, $_POST['Nombres'],$_POST['Apellidos'],$_POST['Email'],$_POST['Contraseña'],$_POST['Ciudad']);
+    $respuesta=$objUsuario->registrar($conexion, $_POST['Nombres'],$_POST['Apellidos'],$_POST['Email'],$_POST['Contrasena'],$_POST['Ciudad']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

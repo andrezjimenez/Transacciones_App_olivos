@@ -1,9 +1,9 @@
-<?php
+<?php 
 class conexion{
     public function conectar(){
         $host = "localhost";
         $user = "root";
-        $password = "";
+        $password = "Root123*";
         $db = "App_Olivos";
         $conexion = mysqli_connect($host,$user,$password,$db);
     
@@ -13,3 +13,4 @@ class conexion{
         return $conexion;
     }
 }
+?>

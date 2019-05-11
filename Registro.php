@@ -1,3 +1,15 @@
+<?php
+    include "clases/conexion.php";
+
+    $objConexion = new conexion();
+    $conexion = $objConexion->conectar();
+
+
+
+    $query="SELECT * FROM City order by 2";
+    $consulta=mysqli_query($conexion,$query);
+    //echo $query;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,8 +68,14 @@
             <div class="form-group col-md-4">
             <label for="inputState" >Ciudad</label>
             <select id="Ciudad" class="form-control form-control-sm" name="Ciudad" required>
-                <option value="Bogota" selected>Bogota</option>
-                <option>...</option>
+                <option value="" selected>Seleccione..</option>
+                <?php
+                     while($resultados2=mysqli_fetch_array($consulta)){                
+                ?>
+                <option value="<?php echo $resultados2['idCity'];?>"> <?php echo $resultados2['CityName'];?></option>
+                <?php    
+                    }
+                ?>   
             </select>
             </div>
 
